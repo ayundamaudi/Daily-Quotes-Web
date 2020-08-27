@@ -6,9 +6,9 @@ html,body{
 }
 
 /* Background image */
-.mySlides{
+#mySlides{
     height: 100% !important;
-    background: url('../img/image1.jpg');
+    background: url('../img/image-1.png');
     background-repeat: no-repeat !important;
     background-size: cover !important;
     display: flex;
