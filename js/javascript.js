@@ -27,7 +27,7 @@ function setToDOM() {
     // array of picture
     var pict = ["/img/image-1.png", "/img/image-2.png", "/img/image-3.png"];
     // array of color quote
-    var color_quoted = ["2f80ed","eb5757","219653","aqua", "mediumvioletred", "brown","darkorange", "deeppink", "maroon", "purple"];
+    var color_quoted = ["2f80ed","eb5757","219653"];
 // console.log(url('${pict[slideIndex % (pict.length)]}'));
     // description quote
     document.getElementById(`desc-content`).innerHTML = myArray[slideIndex].en;
