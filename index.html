@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Quotes Web</title>
+    <link href='/img/icon-5.png' rel='icon'/>
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="mySlides" id="mySlides">
+        <!-- blockquote  -->
+        <div class="text-block container">
+            <!-- top quote  -->
+            <h2 class="blockquote-text" id="blockquote-quoted" onclick="plusSlides(1)">&#8220;</h2>
+            <!-- description quote  -->
+            <h2 id="desc-content" class="blockquote-text"></h2>
+            <!-- name of author and quote down  -->
+            <div class="blockquote-quoted-down">
+                <h3 id="name-author" class="blockquote-text blockquote-text-credit">
+                </h3>
+                <img class="img-down" src="/img/“1.jpg" alt="">
+            </div>
+        </div>
+
+        <!-- button slide  -->
+        <div class="container">
+            <div class="prev" onclick="plusSlides(-1)">
+                &#8249;
+            </div>
+            <div class="next" onclick="plusSlides(1)">
+                &#8250;
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/javascript.js"></script>
+</body>
+
+</html>

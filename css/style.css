@@ -1,0 +1,138 @@
+html,body{
+    padding: 0px;
+    margin:0px;
+    height: 100%;
+    width: 100%;
+}
+
+/* Background image */
+.mySlides{
+    height: 100% !important;
+    background: url('../img/image1.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* blockquote */
+.text-block{
+  position: absolute;
+  max-width: 750px;
+  background: white;
+  padding: 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  display: fixed;
+  position : fixed;
+  color: black;
+  width: 36px;
+  height: 36px;
+  font-size: 30px;
+  line-height: 29px;
+  background-color: white;
+  border-radius: 100%;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 15%;
+}
+
+.prev {
+  left: 15%;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: black;
+  color: white;
+}
+
+.blockquote-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  margin: 25px;
+  user-select: none;
+}
+
+/* name of author  */
+.blockquote-text-credit {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  padding-top: 5%;
+  user-select: none;
+}
+
+#blockquote-quoted{
+  font-size: 135px;
+  color: #2f80ed;
+  padding-top: 10px;
+  user-select: none;
+}
+
+.blockquote-quoted-down {
+  display: flex; 
+  justify-content: space-between;
+}
+
+/* image quote down */
+.img-down {
+  user-select: none;
+  margin-right: 5%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 500px) {
+  .text-block{
+    width: 250px;
+    padding: 5px;
+  }
+
+  .img-down {
+    width: 35px;
+    height: 35px;
+    margin-top: 0px;
+  }
+
+  #blockquote-quoted{
+    font-size: 70px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .blockquote-text {
+    font-size: 15px;
+    line-height: 17px;
+    margin: 10px;
+  }
+
+  .blockquote-text-credit {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+
+  .next {
+    right: 2%;
+  }
+  
+  .prev {
+    left: 2%;
+  }
+}
