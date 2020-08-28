@@ -6,7 +6,7 @@ fetch('https://programming-quotes-api.herokuapp.com/quotes/lang/en')
     .then(response => response.json())
     .then(result => {
         myArray = result;
-        console.log(myArray)
+        console.log(myArray);
         setToDOM();
     })
 
@@ -16,26 +16,37 @@ function plusSlides(n) {
     if (slideIndex == myArray.length) {
         slideIndex = 0;
     }
-    else if (slideIndex < 0) {
-        slideIndex = myArray.length-1;
+    setToDOM();
+    random_bg_color();
+}
+
+function prevSlides(n){
+    slideIndex += n;
+    if (slideIndex < 0) {
+    slideIndex = myArray.length-1;
     }
     setToDOM();
+    random_bg_color();
 }
 
 // <!-- function data to DOM --> 
 function setToDOM() {
     // array of picture
-    var pict = ["/img/image-1.png", "/img/image-2.png", "/img/image-3.png","/img/image4.jpg","/img/image5.jpg","/img/image6.jpg","/img/image7.jpg","/img/image8.jpg","/img/image9.jpg"];
-    // array of color quote
-    var color_quoted = ["2f80ed","eb5757","219653","aqua","purple","yellow","brown","darkorange","hotpink"];
-// console.log(url('${pict[slideIndex % (pict.length)]}'));
+    var pict = ["/img/image1.jpg", "/img/image2.jpg", "/img/image3.jpg","/img/image4.jpg","/img/image5.jpg","/img/image6.jpg","/img/image7.jpg","/img/image8.jpg","/img/image9.jpg"];
+
     // description quote
     document.getElementById(`desc-content`).innerHTML = myArray[slideIndex].en;
     // author name of quote
     document.getElementById(`name-author`).innerHTML = myArray[slideIndex].author;
     // picture of each slide
     document.getElementById(`mySlides`).style.background = `url('${pict[slideIndex % (pict.length)]}')`;
-    // color of each slide
-    document.getElementById(`blockquote-quoted`).style.color = color_quoted[slideIndex % (color_quoted.length)];
 }
 
+function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+ document.getElementById(`blockquote-quoted`).style.color = bgColor;
+}
