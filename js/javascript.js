@@ -38,7 +38,7 @@ function random_color() {
 
 function random_bg_img() {
     var dir = '/img';
-    var images = ["/image1.jpg", "/image2.jpg", "/image3.jpg","/image4.jpg","/image5.jpg","/image6.jpg","/image7.jpg","/image8.jpg","/image9.jpg"];
+    var images = ["/image1.jpg", "/image2.jpg", "/image3.jpg","/image4.jpg","/image5.jpg","/image6.jpg","/image7.jpg","/image8.jpg","/image9.jpg","/image10.jpg","/image11.jpg"];
     var randomCount = (Math.floor(Math.random() * images.length));
     document.getElementById(`mySlides`).setAttribute("style", "background-image: url(" + dir + images[randomCount]);
 }
