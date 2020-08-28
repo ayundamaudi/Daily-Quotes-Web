@@ -17,7 +17,6 @@ function plusSlides(n) {
         slideIndex = 0;
     }
     setToDOM();
-    random_bg_color();
 }
 
 function prevSlides(n){
@@ -26,27 +25,31 @@ function prevSlides(n){
     slideIndex = myArray.length-1;
     }
     setToDOM();
-    random_bg_color();
+}
+
+function random_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var random_bg_imgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+ document.getElementById(`blockquote-quoted`).style.color = random_bg_imgColor;
+}
+
+function random_bg_img() {
+    var dir = '/img';
+    var images = ["/image1.jpg", "/image2.jpg", "/image3.jpg","/image4.jpg","/image5.jpg","/image6.jpg","/image7.jpg","/image8.jpg","/image9.jpg"];
+    var randomCount = (Math.floor(Math.random() * images.length));
+    document.getElementById(`mySlides`).setAttribute("style", "background-image: url(" + dir + images[randomCount]);
 }
 
 // <!-- function data to DOM --> 
 function setToDOM() {
-    // array of picture
-    var pict = ["/img/image1.jpg", "/img/image2.jpg", "/img/image3.jpg","/img/image4.jpg","/img/image5.jpg","/img/image6.jpg","/img/image7.jpg","/img/image8.jpg","/img/image9.jpg"];
-
     // description quote
     document.getElementById(`desc-content`).innerHTML = myArray[slideIndex].en;
     // author name of quote
     document.getElementById(`name-author`).innerHTML = myArray[slideIndex].author;
-    // picture of each slide
-    document.getElementById(`mySlides`).style.background = `url('${pict[slideIndex % (pict.length)]}')`;
-}
 
-function random_bg_color() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-
- document.getElementById(`blockquote-quoted`).style.color = bgColor;
+    random_color();
+    random_bg_img();
 }

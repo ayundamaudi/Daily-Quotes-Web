@@ -8,7 +8,7 @@ html,body{
 /* Background image */
 #mySlides{
     height: 100% !important;
-    background: url('../img/image-1.png');
+    background: url('../img/image1.jpg');
     background-repeat: no-repeat !important;
     background-size: cover !important;
     display: flex;
