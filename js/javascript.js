@@ -45,10 +45,9 @@ function random_bg_img() {
     var bg_img = (Math.floor(Math.random() * imagesArray.length));
 
     if (imagesArray[bg_img]===undefined) {
-        bg_img = (Math.floor(Math.random() * imagesArray.length));
+        bg_img += bg_img;
     }
     
-    // document.getElementById(`mySlides`).setAttribute("style", "background-image: url(" + folder + imagesArray[bg_img]);
     document.getElementById(`mySlides`).style.background = `url('${folder+imagesArray[bg_img]}')`;
 }
 
